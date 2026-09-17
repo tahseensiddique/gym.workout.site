@@ -1,22 +1,13 @@
-# ForgeFit
+# PULSE
 
-A responsive gym workout dashboard built with plain HTML, CSS and JavaScript.
+A completely redesigned, responsive gym workout dashboard.
 
-## Included
+### Features
+- Upper-body workout plan and exercise checklist
+- Working stopwatch and countdown rest timer
+- Quick 30/60/90 second rest presets
+- Muscle group filtering and completed exercise states
+- Weekly progress visualization and streak dashboard
+- Responsive mobile layout
 
-- Workout dashboard with weekly stats and progress visualization
-- Today's upper-body workout plan and exercise checklist
-- Stopwatch and countdown rest timer with quick presets
-- Muscle-group exercise filtering
-- Responsive mobile navigation and mobile-first layout
-- Local interactive UI with no build step or dependencies
-
-## Run locally
-
-Open `index.html` in a browser, or serve the folder with any static server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
+Open `index.html` directly or run `python3 -m http.server 8000` in this folder.
