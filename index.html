@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ForgeFit — a focused workout dashboard with plans, timers and progress tracking." />
+  <title>ForgeFit | Workout Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#top" aria-label="ForgeFit home"><span class="brand-mark">F</span><span>FORGE<span class="accent">FIT</span></span></a>
+      <p class="eyebrow nav-label">Workspace</p>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-link active" href="#dashboard"><span>⌂</span> Dashboard</a>
+        <a class="nav-link" href="#plans"><span>▦</span> Workout plans</a>
+        <a class="nav-link" href="#exercises"><span>◉</span> Exercise library</a>
+        <a class="nav-link" href="#progress"><span>↗</span> Progress</a>
+      </nav>
+      <div class="sidebar-card">
+        <div class="mini-flame">✦</div>
+        <strong>Keep the streak alive</strong>
+        <p>Complete 2 more sessions this week to hit your goal.</p>
+        <div class="progress-track"><span style="width: 72%"></span></div>
+        <small>5 of 7 sessions</small>
+      </div>
+      <div class="sidebar-bottom"><button class="profile-chip" id="profileButton" type="button"><span class="avatar">TS</span><span><b>Tahseen</b><small>Pro member</small></span><span class="more">•••</span></button></div>
+    </aside>
+
+    <main class="main-content" id="top">
+      <header class="topbar"><button class="icon-button menu-toggle" id="menuToggle" aria-label="Open menu">☰</button><div class="breadcrumb">MY SPACE <span>/</span> DASHBOARD</div><div class="top-actions"><button class="icon-button" aria-label="Notifications">♢<i></i></button><button class="today-button" id="todayButton">Thu, Sep 17 <span>⌄</span></button></div></header>
+
+      <section class="hero" id="dashboard">
+        <div><p class="eyebrow">Thursday, September 17, 2026</p><h1>Train with <em>purpose.</em></h1><p class="hero-copy">Small steps. Serious results. Your next session is ready when you are.</p></div>
+        <div class="hero-metric"><span class="metric-icon">✦</span><div><strong>12</strong><span>day streak</span></div></div>
+      </section>
+
+      <section class="stats-grid" aria-label="Weekly stats">
+        <article class="stat-card"><span class="stat-icon orange">↗</span><div><strong>4</strong><small>Workouts this week</small></div><b class="trend">+20%</b></article>
+        <article class="stat-card"><span class="stat-icon blue">◷</span><div><strong>3.8<span class="unit">h</span></strong><small>Time trained</small></div><b class="trend">+12%</b></article>
+        <article class="stat-card"><span class="stat-icon purple">◒</span><div><strong>2,840</strong><small>Calories burned</small></div><b class="trend">+8%</b></article>
+        <article class="stat-card"><span class="stat-icon green">✓</span><div><strong>78<span class="unit">%</span></strong><small>Goal completion</small></div><b class="trend">+5%</b></article>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel workout-panel" id="plans"><div class="panel-heading"><div><p class="eyebrow">Your plan</p><h2>Today's workout</h2></div><button class="text-button" id="viewPlan">View full plan <span>→</span></button></div><div class="workout-summary"><div class="workout-art"><span>UPPER</span><strong>BODY</strong><i>✦</i></div><div class="workout-info"><div class="tag">HYPERTROPHY <span>•</span> 45 MIN</div><h3>Upper body strength</h3><p>Build strength across your chest, back and shoulders.</p><div class="exercise-count"><span><b>6</b> exercises</span><span><b>3</b> sets each</span><span><b>~320</b> kcal</span></div></div></div><button class="primary-button start-button" id="startWorkout">Start workout <span>→</span></button></section>
+
+        <section class="panel timer-panel" id="timer"><div class="panel-heading"><div><p class="eyebrow">Stay focused</p><h2>Workout timer</h2></div><button class="small-icon-button" id="timerReset" aria-label="Reset timer">↻</button></div><div class="timer-tabs"><button class="timer-tab active" data-mode="stopwatch">Stopwatch</button><button class="timer-tab" data-mode="rest">Rest timer</button></div><div class="timer-display"><span id="timerLabel">READY?</span><strong id="timerValue">00:00</strong></div><div class="timer-controls"><button class="timer-control secondary" id="timerReset2">Reset</button><button class="timer-control" id="timerStart">Start timer <span>▶</span></button></div><div class="quick-rests" aria-label="Quick rest timers"><button data-seconds="30">30 sec</button><button data-seconds="60">60 sec</button><button data-seconds="90">90 sec</button></div></section>
+      </div>
+
+      <section class="panel routine-panel" id="exercises"><div class="panel-heading"><div><p class="eyebrow">Up next</p><h2>Today's routine</h2></div><button class="filter-button" id="filterButton">All muscle groups <span>⌄</span></button></div><div class="routine-list" id="routineList"><article class="routine-item" data-muscle="Chest"><span class="exercise-number">01</span><div class="exercise-thumb chest">↗</div><div class="exercise-details"><h3>Barbell bench press</h3><p>Chest <span>•</span> 4 sets × 8 reps</p></div><span class="exercise-weight">60 kg</span><button class="check-button" aria-label="Mark bench press complete">✓</button></article><article class="routine-item" data-muscle="Back"><span class="exercise-number">02</span><div class="exercise-thumb back">⌁</div><div class="exercise-details"><h3>Lat pulldown</h3><p>Back <span>•</span> 3 sets × 10 reps</p></div><span class="exercise-weight">45 kg</span><button class="check-button" aria-label="Mark lat pulldown complete">✓</button></article><article class="routine-item" data-muscle="Shoulders"><span class="exercise-number">03</span><div class="exercise-thumb shoulders">✦</div><div class="exercise-details"><h3>Seated shoulder press</h3><p>Shoulders <span>•</span> 3 sets × 10 reps</p></div><span class="exercise-weight">18 kg</span><button class="check-button" aria-label="Mark shoulder press complete">✓</button></article><article class="routine-item" data-muscle="Arms"><span class="exercise-number">04</span><div class="exercise-thumb arms">↗</div><div class="exercise-details"><h3>Incline dumbbell curl</h3><p>Arms <span>•</span> 3 sets × 12 reps</p></div><span class="exercise-weight">12 kg</span><button class="check-button" aria-label="Mark dumbbell curl complete">✓</button></article></div></section>
+
+      <section class="bottom-grid" id="progress"><article class="panel progress-panel"><div class="panel-heading"><div><p class="eyebrow">Consistency</p><h2>Weekly progress</h2></div><span class="date-range">Sep 11 – 17</span></div><div class="chart"><div class="chart-y"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><div class="bars"><span style="height:48%"><b>Mon</b></span><span style="height:72%"><b>Tue</b></span><span style="height:54%"><b>Wed</b></span><span class="today-bar" style="height:88%"><b>Thu</b></span><span style="height:36%"><b>Fri</b></span><span style="height:60%"><b>Sat</b></span><span style="height:26%"><b>Sun</b></span></div></div></div></article><article class="panel goal-panel"><p class="eyebrow">Monthly goal</p><h2>Build consistency</h2><div class="goal-ring"><div><strong>18</strong><span>/ 24 workouts</span></div></div><p class="goal-copy">You're <b>75%</b> of the way there. Keep showing up.</p><button class="outline-button" id="logWorkout">Log a workout <span>+</span></button></article></section>
+      <footer>FORGE<span>FIT</span> <small>Built for the work.</small></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
